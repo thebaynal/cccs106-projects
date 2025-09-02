@@ -93,7 +93,7 @@ This section outlines the primary technical hurdles encountered during the lab a
 *   **Challenge 1:** Errors in the initial code given.
     *   **Solution:** Updated the code so it'll run properly.
 *   **Challenge 2:** The proper flow of using the Git command in the CMD.
-    *   **Solution:** Recognized and familiarized the proper flow of updating the version in using git. 
+    *   **Solution:** Recognized and familiarized with the proper flow of updating the version using git. 
 
 ---
 
@@ -112,27 +112,27 @@ This lab provided significant insights into both version control and GUI develop
 ### A. Git Repository Snapshot
 
 *   **GitHub Repository:** A screenshot of the GitHub repository showcasing the project files, README, and commit history.
-    *   ![\[Divino's Github Repository\]](lab2_screenshots\github_repo_ss.png)
+    *   ![\[Divino's Github Repository\]](lab2_screenshots/github_repo_ss.png)
 
     * [\[Divino's Github Repository\]](https://github.com/thebaynal/cccs106-projects)
 
 *   **Local Git Log:** A visual representation of the local commit history obtained via `git log`.
 
-    *   ![\[Divino's Github Repository\]](lab2_screenshots\git_log.png)
+    *   ![\[Divino's Github Repository\]](lab2_screenshots/git_log.png)
 
 ### B. GUI Applications Showcase
 
 *   **`hello_flet.py` in Action:** A screenshot demonstrating the interactive greeting, student info display, and an active dialog box.
 
-    *   ![\[Student Info Display\]](lab2_screenshots\hello_flet.png)
+    *   ![\[Student Info Display\]](lab2_screenshots/hello_flet.png)
 
-    *   ![\[Student Info Display\]](lab2_screenshots\info.png)
+    *   ![\[Student Info Display\]](lab2_screenshots/info.png)
 
 *   **`personal_info_gui.py` - Form & Profile:** A screenshot showing the filled personal information form and the generated profile display.
 
-    *   ![\[Student Info Display\]](lab2_screenshots\student_info.png)
+    *   ![\[Student Info Display\]](lab2_screenshots/student_info.png)
     
-    * ![\[Student Info Display\]](lab2_screenshots\student_info_w.png)
+    * ![\[Student Info Display\]](lab2_screenshots/student_info_w.png)
 
 ---
 
