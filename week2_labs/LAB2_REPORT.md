@@ -3,10 +3,10 @@
 
 **Student Information:**
 
-*   **Name:** [Your Full Name]
-*   **Student ID:** [Your Student ID]
-*   **Section:** [Your Section]
-*   **Date:** [Submission Date]
+*   **Name:** Divino Al D. Ricafort
+*   **Student ID:** 231002032
+*   **Section:** BSCS-3A
+*   **Date:** September 3, 2025
 
 ---
 
@@ -112,16 +112,27 @@ This lab provided significant insights into both version control and GUI develop
 ### A. Git Repository Snapshot
 
 *   **GitHub Repository:** A screenshot of the GitHub repository showcasing the project files, README, and commit history.
-    *   [Placeholder for GitHub Repo Screenshot Link/Description]
+    *   ![\[Divino's Github Repository\]](lab2_screenshots\github_repo_ss.png)
+
+    * [\[Divino's Github Repository\]](https://github.com/thebaynal/cccs106-projects)
+
 *   **Local Git Log:** A visual representation of the local commit history obtained via `git log`.
-    *   [Placeholder for Git Log Screenshot Link/Description]
+
+    *   ![\[Divino's Github Repository\]](lab2_screenshots\git_log.png)
 
 ### B. GUI Applications Showcase
 
 *   **`hello_flet.py` in Action:** A screenshot demonstrating the interactive greeting, student info display, and an active dialog box.
-    *   [Placeholder for hello_flet.py Screenshot Link/Description]
+
+    *   ![\[Student Info Display\]](lab2_screenshots\hello_flet.png)
+
+    *   ![\[Student Info Display\]](lab2_screenshots\info.png)
+
 *   **`personal_info_gui.py` - Form & Profile:** A screenshot showing the filled personal information form and the generated profile display.
-    *   [Placeholder for personal_info_gui.py Screenshot Link/Description]
+
+    *   ![\[Student Info Display\]](lab2_screenshots\student_info.png)
+    
+    * ![\[Student Info Display\]](lab2_screenshots\student_info_w.png)
 
 ---
 
@@ -130,6 +141,7 @@ This lab provided significant insights into both version control and GUI develop
 *   **`hello_flet.py`:**
     *   Add a button to clear the input field.
     *   Implement a simple animation for the greeting.
+    *   Added comments to further the readability of the code. 
 *   **`personal_info_gui.py`:**
     *   Add more complex form elements (e.g., DatePicker, CheckboxGroup).
     *   Implement saving the generated profile to a file (e.g., TXT, JSON).
