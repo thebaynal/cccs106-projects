@@ -41,23 +41,53 @@ def display_contacts(page, contacts_list_view, db_conn):
 
     page.update()
 
+def validate_inputs(name_input, phone_input, email_input, page):
+    has_error = False
+
+    # Reset all errors first
+    for field in [name_input, phone_input, email_input]:
+        field.error_text = None
+        field.border_color = None
+
+    # Check Name
+    if not name_input.value.strip():
+        name_input.error_text = "Name is required"
+        name_input.border_color = ft.Colors.RED
+        has_error = True
+
+    # Check Phone
+    if not phone_input.value.strip():
+        phone_input.error_text = "Phone number is required"
+        phone_input.border_color = ft.Colors.RED
+        has_error = True
+
+    # Check Email
+    if not email_input.value.strip():
+        email_input.error_text = "Email is required"
+        email_input.border_color = ft.Colors.RED
+        has_error = True
+
+    page.update()
+    return not has_error
+
 
 def add_contact(page, inputs, contacts_list_view, db_conn):
     """Adds a new contact and refreshes the list."""
     name_input, phone_input, email_input = inputs
 
-    add_contact_db(
-        db_conn,
-        name_input.value,
-        phone_input.value,
-        email_input.value,
-    )
+    if validate_inputs(name_input, phone_input, email_input, page):
+        add_contact_db(
+            db_conn,
+            name_input.value,
+            phone_input.value,
+            email_input.value,
+        )
 
-    for field in inputs:
-        field.value = ""
+        for field in inputs:
+            field.value = ""
 
-    display_contacts(page, contacts_list_view, db_conn)
-    page.update()
+        display_contacts(page, contacts_list_view, db_conn)
+        page.update()
 
 
 def delete_contact(page, contact_id, db_conn, contacts_list_view):
