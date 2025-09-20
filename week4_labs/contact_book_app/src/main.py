@@ -5,10 +5,15 @@ from app_logic import *
 
 
 def main(page: ft.Page):
+    # Page configuration
     page.title = "Contact Book"
     page.vertical_alignment = ft.MainAxisAlignment.START
-    page.window_width = 400
-    page.window_height = 600
+    page.window.maximized = True
+    page.window_min_width = 400
+    page.window_min_height = 600
+    page.padding = 20
+    page.spacing = 10
+    
 
     # Initialize database
     db_conn = init_db()
@@ -22,6 +27,8 @@ def main(page: ft.Page):
     # List view for contacts
     contacts_list_view = ft.ListView(expand=1, spacing=10, auto_scroll=True)
 
+    
+
     # Add button
     add_button = ft.ElevatedButton(
         text="Add Contact",
@@ -30,17 +37,35 @@ def main(page: ft.Page):
 
     # Page layout
     page.add(
-        ft.Column(
+        ft.Row(
             [
-                ft.Text("Enter Contact Details:", size=20, weight=ft.FontWeight.BOLD),
-                name_input,
-                phone_input,
-                email_input,
-                add_button,
-                ft.Divider(),
-                ft.Text("Contacts:", size=20, weight=ft.FontWeight.BOLD),
-                contacts_list_view,
-            ]
+                # Left column (inputs + button)
+                ft.Column(
+                    [
+                        ft.Text("Enter Contact Details:", size=20, weight=ft.FontWeight.BOLD),
+                        name_input,
+                        phone_input,
+                        email_input,
+                        add_button,
+                    ],
+                    spacing=10,
+                    expand=1  # take available space
+                ),
+
+                ft.VerticalDivider(width=20, thickness=1, color=ft.Colors.GREY_300),
+                
+                # Right column (display contacts)
+                ft.Column(
+                    [
+                        ft.Text("Contacts:", size=20, weight=ft.FontWeight.BOLD),
+                        contacts_list_view,
+                    ],
+                    spacing=10,
+                    expand=2  # give more space to the contacts list
+                )
+            ],
+            expand=True,
+            spacing=30,  # space between columns
         )
     )
 
